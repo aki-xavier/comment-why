@@ -1,0 +1,19 @@
+[package]
+name = "comment-why"
+version = "0.1.0"
+description = "The WHY-ONLY comment rules: a comment has to say something the code under it does not. A library and a command line, with no dependencies and no compiler."
+edition = "2021"
+rust-version = "1.87"
+license = "MIT"
+publish = false
+
+[lib]
+name = "comment_why"
+path = "src/lib.rs"
+
+[[bin]]
+name = "comment-why"
+path = "src/main.rs"
+
+[dependencies]
+# none: the rules read text, so the toolchain they run on is the caller's business

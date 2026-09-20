@@ -1,0 +1,7 @@
+# Rust: the build directory. (mbx points it at a shared cache; a plain cargo
+# build writes it here.) Cargo.lock is NOT ignored: there is a binary here, so
+# the lock is the build that gets tested.
+/target
+
+# macOS
+.DS_Store
