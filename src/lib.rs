@@ -24,8 +24,16 @@
 //
 // OUT OF SCOPE: a file's first block and a module header name what they open. That is orientation, not
 // explanation.
+//
+// WHY THE GATE IS IN HERE. `gate.rs` is the walk a project runs from its own suite: its roots, the
+// floor its corpus has to clear, and the exceptions it records. Every project runs the same walk, so it
+// is stated once rather than copied into each repository — where the copies would drift from the rules
+// they are meant to hold that project to, silently, since a gate that measures the wrong thing still
+// passes.
 
 mod lexer;
+
+pub mod gate;
 
 pub mod sense;
 

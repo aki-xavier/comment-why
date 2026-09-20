@@ -46,9 +46,12 @@ being one.
 
    `mbx` is this family's Cargo build-cache wrapper; plain `cargo` runs the same line.
 
-3. Or as a gate inside the suite, which is what `control-ga-pid` does: a test that walks the project's
-   roots and fails on a finding, with the project's own exceptions recorded beside it — see
-   `../control-ga-pid/tests/comment_why.rs`.
+3. Or as a gate inside the suite, which is how every sibling project takes it: `comment_why::gate` walks
+   the project's own roots and fails on a finding, and the test states only that project's data — the
+   roots its prose lives in, the floor its corpus has to clear, and the exceptions it keeps anyway. The
+   walk is written once, here, so ten projects do not keep ten copies of it to drift apart;
+   `../control-ga-pid/tests/comment_why.rs` is one of them, and it is a project that keeps no
+   exception.
 
 ## The command line
 
